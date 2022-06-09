@@ -1,6 +1,5 @@
 class Solution:
     def twoSum(self, numbers: List[int], target: int) -> List[int]:
-        res=[]
         
         beg=0
         end=len(numbers)-1
@@ -11,8 +10,6 @@ class Solution:
             elif(numbers[beg]+numbers[end]>target):
                 end-=1
             else:
-                res.append(beg+1)
-                res.append(end+1)
-                break
+                return [beg+1,end+1]
         
-        return res
+        return []
