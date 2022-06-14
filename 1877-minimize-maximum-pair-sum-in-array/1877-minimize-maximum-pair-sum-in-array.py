@@ -2,9 +2,10 @@ class Solution:
     def minPairSum(self, nums: List[int]) -> int:
         nums.sort()
         n=len(nums)
-        lis=[0]*(n//2)
+        max_val=nums[0]+nums[n-1]
         
-        for i in range(n//2):
-            lis[i]=nums[i]+nums[n-1-i]
+        for i in range(1,n//2):
+            val=nums[i]+nums[n-1-i]
+            max_val=max(max_val,val)
         
-        return max(lis)
+        return max_val
