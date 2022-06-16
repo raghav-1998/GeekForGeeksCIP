@@ -1,7 +1,8 @@
 class Solution:
     def longestPalindrome(self, s: str) -> str:
         res = ""
-        for i in range(len(s)):
+        n=len(s)
+        for i in range(n):
             # odd case, like "aba"
             tmp = self.helper(s, i, i)
             if len(tmp) > len(res):
